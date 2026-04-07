@@ -40,8 +40,8 @@ class CTTP_Q1 : AppCompatActivity() {
         val optn3 = findViewById<TextView>(R.id.optn3Text)
         val optn4 = findViewById<TextView>(R.id.optn4Text)
 
-        val explanationHeading = findViewById<TextView>(R.id.explanationHeading)
-        val explanationText = findViewById<TextView>(R.id.explanationText)
+//        val explanationHeading = findViewById<TextView>(R.id.explanationHeading)
+//        val explanationText = findViewById<TextView>(R.id.explanationText)
         val nextBtn = findViewById<MaterialButton>(R.id.nextBtn)
         val sbmtBtn = findViewById<MaterialButton>(R.id.submitBtn)
         val bookmarkBtn = findViewById<MaterialButton>(R.id.bookmarkButton)
@@ -77,7 +77,7 @@ class CTTP_Q1 : AppCompatActivity() {
         }
 
         nextBtn.setOnClickListener {
-            val intent = Intent(this, CTTP_Q2::class.java)
+            val intent = Intent(this, DBMS_Q2::class.java)
             startActivity(intent)
         }
 
@@ -95,8 +95,8 @@ class CTTP_Q1 : AppCompatActivity() {
             optn3.text = ""
             optn3.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             radBtn3.setTextColor(themeTextColor)
-            explanationHeading.text = ""
-            explanationText.text = ""
+//            explanationHeading.text = ""
+//            explanationText.text = ""
         }
 
         radGrp.setOnCheckedChangeListener { _,_ -> resetState() }
@@ -119,8 +119,8 @@ class CTTP_Q1 : AppCompatActivity() {
                     optn2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                     radBtn2.setTextColor(themeTextColor)
                     optn3.text = "Correct"
-                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                    optn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                    optn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
                     optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
                 }
                 else{
@@ -132,9 +132,9 @@ class CTTP_Q1 : AppCompatActivity() {
                         optn4.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                         radBtn4.setTextColor(themeTextColor)
                         optn1.text = "Wrong"
-                        optn1.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        optn1.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                         optn1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
-                        radBtn1.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        radBtn1.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                     }
                     else if (radBtn2.isChecked){
                         optn1.text = ""
@@ -144,9 +144,9 @@ class CTTP_Q1 : AppCompatActivity() {
                         optn4.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                         radBtn4.setTextColor(themeTextColor)
                         optn2.text = "Wrong"
-                        optn2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        optn2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                         optn2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
-                        radBtn2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        radBtn2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                     }
                     else{
                         optn1.text = ""
@@ -156,19 +156,19 @@ class CTTP_Q1 : AppCompatActivity() {
                         optn2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                         radBtn2.setTextColor(themeTextColor)
                         optn4.text = "Wrong"
-                        optn4.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        optn4.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                         optn4.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
-                        radBtn4.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        radBtn4.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                     }
                     optn3.text = "Correct"
-                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                    optn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                    optn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
                     optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
                 }
 
-                explanationHeading.text = "Explanation :"
-                explanationText.text = "The post-increment operator (x++) first uses the current value of x and then increases it by 1.\n" +
-                        "So, printf prints 5, and only after printing does x become 6."
+//                explanationHeading.text = "Explanation :"
+//                explanationText.text = "The post-increment operator (x++) first uses the current value of x and then increases it by 1.\n" +
+//                        "So, printf prints 5, and only after printing does x become 6."
             }
         }
 
