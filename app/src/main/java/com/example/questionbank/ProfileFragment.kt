@@ -32,11 +32,11 @@ class ProfileFragment : Fragment() {
         val ageText = view.findViewById<TextView>(R.id.ageText)
         val stateText = view.findViewById<TextView>(R.id.stateText)
 
-        nameText.text = name
-        emailText.text = email
-        phoneText.text = phone
-        ageText.text = age
-        stateText.text = state
+        nameText.text = state
+        emailText.text = phone
+        phoneText.text = age
+        ageText.text = name
+        stateText.text = email
 
         return view
     }
