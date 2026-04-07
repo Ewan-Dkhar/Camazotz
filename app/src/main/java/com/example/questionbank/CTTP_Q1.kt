@@ -121,7 +121,7 @@ class CTTP_Q1 : AppCompatActivity() {
                     optn3.text = "Correct"
                     radBtn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                     optn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_24,0,0,0)
                 }
                 else{
                     if (radBtn1.isChecked){

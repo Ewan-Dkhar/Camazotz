@@ -12,7 +12,7 @@
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorTitle"
+        android:background="#7E0B0B"
         android:elevation="10dp"
         android:translationZ="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,18 +44,20 @@
                 android:layout_height="wrap_content"
                 android:text="Question 1"
                 android:textColor="?attr/colorOnBackground"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.437"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.255" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/bookmarkButton"
                 style="@style/Widget.Material3.Button.IconButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="7dp"
+                android:layout_height="250dp"
                 android:padding="0dp"
                 app:icon="@drawable/outline_bookmark_24"
                 app:iconGravity="textStart"
@@ -67,6 +69,14 @@
                 app:layout_constraintHorizontal_bias="0.953"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:src="@drawable/fan"
+                tools:layout_editor_absoluteX="48dp"
+                tools:layout_editor_absoluteY="114dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -111,7 +121,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="What will be the output of the following C code?\nint x = 5;\nprintf(&quot;%d&quot;, x++);"
-                android:textColor="?attr/colorOnSurface"
+                android:textColor="#F1F0F2"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="10dp"
@@ -119,19 +129,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/view2"
                 app:layout_constraintTop_toBottomOf="@id/quesNo"
-                app:layout_constraintStart_toEndOf="@id/imageView4"/>
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="136dp"
-                android:layout_height="136dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="32dp"
-                android:src="@drawable/problem_solving_cuate"
-                app:layout_constraintEnd_toStartOf="@id/textView2"
-                app:layout_constraintHorizontal_bias="0.322"
-                app:layout_constraintStart_toStartOf="@id/view2"
-                app:layout_constraintTop_toTopOf="@id/view2" />
+                />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -147,9 +145,9 @@
                 app:cardCornerRadius="30dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/question_bg"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/graduation_cap_icon"
                     android:padding="20dp">
 
                     <RadioGroup
@@ -160,46 +158,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <RadioButton
-                            android:id="@+id/optn1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="4"
-                            android:textSize="20sp"
-                            android:textColor="?attr/colorOnSurface"
-                            android:textStyle="bold" />
-
-                        <RadioButton
-                            android:id="@+id/optn2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="6"
-                            android:textColor="?attr/colorOnSurface"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <RadioButton
-                            android:id="@+id/optn3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="5"
-                            android:textColor="?attr/colorOnSurface"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <RadioButton
-                            android:id="@+id/optn4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Compilation Error"
-                            android:textColor="?attr/colorOnSurface"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
                     </RadioGroup>
 
                     <TextView
@@ -209,8 +167,8 @@
                         android:layout_marginTop="18dp"
                         android:layout_marginEnd="36dp"
                         android:text=""
-                        android:textSize="20sp"
                         android:textColor="?attr/colorOnSurface"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/radioGroup" />
 
@@ -221,8 +179,8 @@
                         android:layout_marginTop="32dp"
                         android:layout_marginEnd="36dp"
                         android:text=""
-                        android:textSize="20sp"
                         android:textColor="?attr/colorOnSurface"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/optn1Text" />
 
@@ -233,8 +191,8 @@
                         android:layout_marginTop="32dp"
                         android:layout_marginEnd="36dp"
                         android:text=""
-                        android:textSize="20sp"
                         android:textColor="?attr/colorOnSurface"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/optn2Text" />
 
@@ -249,6 +207,10 @@
                         android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/optn3Text" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -285,6 +247,50 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/explanationHeading"/>
 
+            <RadioButton
+                android:id="@+id/optn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <RadioButton
+                android:id="@+id/optn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+            <RadioButton
+                android:id="@+id/optn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="78dp" />
+
+            <RadioButton
+                android:id="@+id/optn4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Compilation Error"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="134dp" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
@@ -310,9 +316,9 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="?attr/colorPrimary"
                 android:padding="5dp"
-                android:text="Previous"
+                android:text="Press"
                 android:enabled="false"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -324,8 +330,8 @@
                 android:backgroundTint="?attr/colorPrimary"
                 android:textColor="?attr/colorOnPrimary"
                 android:padding="5dp"
-                android:text="Submit"
-                android:textSize="18sp"
+                android:text="Suit"
+                android:textSize="28sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -338,7 +344,7 @@
                 android:backgroundTint="?attr/colorPrimary"
                 android:textColor="?attr/colorOnPrimary"
                 android:padding="5dp"
-                android:text="Next"
+                android:text="Net"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
