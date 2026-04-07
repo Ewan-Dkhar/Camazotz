@@ -13,10 +13,7 @@ import com.google.android.material.button.MaterialButton
 
 class HomeFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -27,12 +24,12 @@ class HomeFragment : Fragment() {
         val cttpBtn = view.findViewById<MaterialButton>(R.id.cttpBtn)
 
         dbmsBtn.setOnClickListener {
-            val intent = Intent(requireContext(), DBMS_Q1::class.java)
+            val intent = Intent(requireContext(), CTTP_Q1::class.java)
             startActivity(intent)
         }
 
         cttpBtn.setOnClickListener {
-            val intent = Intent(requireContext(), CTTP_Q1::class.java)
+            val intent = Intent(requireContext(), DBMS_Q1::class.java)
             startActivity(intent)
         }
 
