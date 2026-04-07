@@ -27,9 +27,9 @@
                     android:id="@+id/imageView"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="5dp"
-                    android:background="@drawable/bg_profile_image"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/baseline_calendar_month_24"
                     android:padding="3dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/baseline_person_24"
@@ -55,7 +55,7 @@
                     android:id="@+id/studentText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Student"
+                    android:text="St"
                     android:layout_marginStart="20dp"
                     android:textSize="16sp"
                     android:textColor="?attr/colorOnSurface"
@@ -64,46 +64,46 @@
                     app:layout_constraintTop_toBottomOf="@id/nameText"
                     app:layout_constraintBottom_toBottomOf="@id/imageView"/>
 
+
                 <View
                     android:id="@+id/view"
                     android:layout_width="0dp"
                     android:layout_height="0.8dp"
-                    android:background="?attr/colorOnSurfaceVariant"
-                    app:layout_constraintTop_toBottomOf="@id/imageView"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="20dp"/>
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageView" />
 
                 <TextView
                     android:id="@+id/contactText"
-                    android:layout_width="0dp"
+                    android:layout_width="382dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/view"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:text="Contact Details"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="18dp"
-                    android:textColor="?attr/colorOnBackground"/>
+                    android:text="Concat Dial"
+                    android:textColor="@color/red"
+                    android:textSize="78sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneImage"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:layout_constraintVertical_bias="0.32"
+                    tools:layout_editor_absoluteX="3dp" />
 
                 <ImageView
                     android:id="@+id/emailImage"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginTop="20dp"
-                    app:layout_constraintTop_toBottomOf="@id/contactText"
+                    android:layout_marginTop="96dp"
+                    android:src="@drawable/baseline_email_24"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:src="@drawable/baseline_email_24"/>
-
+                    app:layout_constraintTop_toBottomOf="@id/contactText" />
 
                 <TextView
                     android:id="@+id/emailtextHeading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="268dp"
                     android:layout_marginTop="-5dp"
-                    android:text="Email"
+                    android:text="Name"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -115,23 +115,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginBottom="-5dp"
                     android:text=""
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
-                    android:layout_marginBottom="-5dp"
                     app:layout_constraintBottom_toBottomOf="@id/emailImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@id/emailImage"
                     app:layout_constraintTop_toBottomOf="@id/emailtextHeading"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
                     android:id="@+id/phoneImage"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginTop="30dp"
-                    app:layout_constraintTop_toBottomOf="@id/emailImage"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:src="@drawable/baseline_phone_24"/>
+                    android:src="@drawable/baseline_phone_24"
+                    tools:layout_editor_absoluteX="225dp"
+                    tools:layout_editor_absoluteY="475dp" />
 
                 <TextView
                     android:id="@+id/phonetextHeading"
@@ -162,52 +163,47 @@
 
                 <TextView
                     android:id="@+id/personalText"
-                    android:layout_width="0dp"
+                    android:layout_width="382dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/phoneImage"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:text="Personal Details"
+                    android:layout_marginTop="132dp"
+                    android:text="Question 3 "
+                    android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="30dp"
-                    android:textColor="?attr/colorOnBackground"/>
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contactText"
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <ImageView
                     android:id="@+id/ageImage"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginTop="20dp"
-                    app:layout_constraintTop_toBottomOf="@id/personalText"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:src="@drawable/baseline_calendar_month_24"/>
+                    android:src="@drawable/baseline_check_circle_24"
+                    app:layout_constraintEnd_toEndOf="@+id/ageText"
+                    app:layout_constraintTop_toBottomOf="@+id/emailImage" />
 
                 <TextView
                     android:id="@+id/agetextHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
                     android:layout_marginTop="-5dp"
-                    android:layout_marginStart="20dp"
                     android:text="Age"
-                    android:textColor="?attr/colorOnBackground"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    android:textSize="28sp"
                     app:layout_constraintStart_toEndOf="@id/ageImage"
                     app:layout_constraintTop_toTopOf="@id/ageImage" />
 
                 <TextView
                     android:id="@+id/ageText"
-                    android:layout_width="0dp"
+                    android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="-5dp"
-                    android:layout_marginStart="20dp"
                     android:text=""
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="@id/ageImage"
-                    app:layout_constraintStart_toEndOf="@id/ageImage"
-                    app:layout_constraintTop_toBottomOf="@id/agetextHeading"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/contactText"
+                    tools:layout_editor_absoluteX="40dp" />
 
                 <ImageView
                     android:id="@+id/stateImage"
@@ -216,7 +212,7 @@
                     android:layout_marginTop="30dp"
                     app:layout_constraintTop_toBottomOf="@id/ageImage"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:src="@drawable/baseline_location_on_24"/>
+                    android:src="@drawable/baseline_person_24"/>
 
                 <TextView
                     android:id="@+id/statetextHeading"
@@ -225,7 +221,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="-5dp"
                     android:text="State"
-                    android:textColor="?attr/colorOnBackground"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@id/stateImage"
@@ -235,15 +231,17 @@
                     android:id="@+id/stateText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="-5dp"
                     android:layout_marginStart="20dp"
+                    android:layout_marginBottom="-5dp"
                     android:text=""
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@id/stateImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@id/stateImage"
                     app:layout_constraintTop_toBottomOf="@id/statetextHeading"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintVertical_bias="1.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

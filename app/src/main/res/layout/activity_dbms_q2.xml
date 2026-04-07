@@ -42,7 +42,7 @@
                 android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Question 2"
+                android:text="Quest 69"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -57,16 +57,17 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:padding="0dp"
-                app:icon="@drawable/outline_bookmark_24"
+                app:icon="@drawable/baseline_email_24"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
                 app:iconSize="30dp"
                 app:iconTint="?attr/colorIcon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.953"
+                app:layout_constraintHorizontal_bias="0.844"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -98,38 +99,23 @@
                 android:id="@+id/quesNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:text="Q. 2 / 2"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="60dp"
+                android:text="Q.333"
+                android:textColor="@color/purple"
                 android:textSize="20sp"
-                android:textColor="?attr/colorOnSurfaceVariant"
                 app:layout_constraintEnd_toEndOf="@id/view2"
                 app:layout_constraintTop_toTopOf="@id/view2" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Which of the following are true about a Primary Key?"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="5dp"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginEnd="10dp"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/view2"
-                app:layout_constraintTop_toBottomOf="@id/quesNo"
-                app:layout_constraintStart_toEndOf="@id/imageView4"/>
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="136dp"
                 android:layout_height="136dp"
-                android:layout_marginTop="32dp"
                 android:layout_marginStart="5dp"
-                android:src="@drawable/problem_solving_cuate"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/meme"
                 app:layout_constraintEnd_toStartOf="@id/textView2"
-                app:layout_constraintHorizontal_bias="0.322"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@id/view2"
                 app:layout_constraintTop_toTopOf="@id/view2" />
 
@@ -156,10 +142,10 @@
                         android:id="@+id/optn1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Unique"
+                        android:layout_marginTop="4dp"
+                        android:text="NOO"
+                        android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textColor="?attr/colorOnSurface"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -168,10 +154,11 @@
                         android:id="@+id/optn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="124dp"
                         android:layout_marginTop="10dp"
-                        android:text="Nullable"
-                        android:textSize="20sp"
+                        android:text="New"
                         android:textColor="?attr/colorOnSurface"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/optn1" />
@@ -180,25 +167,26 @@
                         android:id="@+id/optn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
                         android:layout_marginTop="10dp"
                         android:text="Duplicate allowed"
-                        android:textColor="?attr/colorOnSurface"
+                        android:textColor="@color/red"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        app:layout_constraintTop_toBottomOf="@id/optn2"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/optn2" />
 
                     <CheckBox
                         android:id="@+id/optn4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Identifies records"
+                        android:layout_marginTop="100dp"
+                        android:text="oops"
+                        android:textColor="@color/purple"
                         android:textSize="20sp"
-                        android:textColor="?attr/colorOnSurface"
                         android:textStyle="bold"
-                        app:layout_constraintTop_toBottomOf="@id/optn3"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/optn3" />
 
                     <TextView
                         android:id="@+id/optn1Text"
@@ -256,6 +244,25 @@
                         app:layout_constraintStart_toEndOf="@+id/optn4"
                         app:layout_constraintTop_toBottomOf="@id/optn3Text" />
 
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Which of the folwing are about a Primee Key?"
+                        android:textColor="@color/blue"
+                        android:textSize="22sp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:layout_editor_absoluteX="98dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="92dp"
+                        android:src="@drawable/hehe"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="40dp" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -291,6 +298,19 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/explanationHeading"/>
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:padding="5dp"
+                android:text="Previous"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                tools:layout_editor_absoluteX="161dp" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
@@ -314,34 +334,20 @@
                 android:id="@+id/previousBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="?attr/colorPrimary"
-                android:textColor="?attr/colorOnPrimary"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/black"
                 android:padding="5dp"
-                android:text="Previous"
+                android:text="Submit"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/submitBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="?attr/colorPrimary"
-                android:padding="5dp"
-                android:text="Submit"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="18sp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-            <com.google.android.material.button.MaterialButton
                 android:id="@+id/nextBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="?attr/colorPrimary"
+                android:backgroundTint="@color/red"
                 android:padding="5dp"
                 android:text="Next"
                 android:enabled="false"
