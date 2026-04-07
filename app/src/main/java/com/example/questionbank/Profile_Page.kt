@@ -23,18 +23,18 @@ class Profile_Page : AppCompatActivity() {
         val age = sharedPref.getString("age",null) ?: "Not Found"
         val state = sharedPref.getString("state",null) ?: "Not Found"
 
-        val nameText = findViewById<TextView>(R.id.nameText)
-        val emailText = findViewById<TextView>(R.id.emailText)
-        val phoneText = findViewById<TextView>(R.id.phoneText)
-        val ageText = findViewById<TextView>(R.id.ageText)
-        val stateText = findViewById<TextView>(R.id.stateText)
+        val nText = findViewById<TextView>(R.id.nameText)
+        val eText = findViewById<TextView>(R.id.emailText)
+        val pText = findViewById<TextView>(R.id.phoneText)
+        val aText = findViewById<TextView>(R.id.ageText)
+        val sText = findViewById<TextView>(R.id.stateText)
         val backBtn = findViewById<MaterialButton>(R.id.backBtn)
 
-        nameText.text = name
-        emailText.text = email
-        phoneText.text = phone
-        ageText.text = age
-        stateText.text = state
+        nText.text = state
+        eText.text = phone
+        pText.text = age
+        aText.text = name
+        sText.text = email
 
         backBtn.setOnClickListener {
             finish()
