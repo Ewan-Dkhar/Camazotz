@@ -52,24 +52,24 @@ class DBMS_Q1 : AppCompatActivity() {
         var isBookmarked = sharedPrefDbms1.contains("dbms1")
 
         if (isBookmarked){
-            bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
+            bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
         }
         else{
-            bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
+            bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
         }
 
         bookmarkBtn.setOnClickListener {
             isBookmarked = !isBookmarked
 
             if (isBookmarked){
-                bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
+                bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
                 Toast.makeText(this,"Question Bookmarked Successfully",Toast.LENGTH_SHORT).show()
 
                 editor.putString("dbms1","Q.1")
                 editor.apply()
             }
             else{
-                bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
+                bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
 
                 editor.remove("dbms1")
                 editor.apply()
@@ -77,7 +77,7 @@ class DBMS_Q1 : AppCompatActivity() {
         }
 
         nextBtn.setOnClickListener {
-            val intent = Intent(this, DBMS_Q2::class.java)
+            val intent = Intent(this, CTTP_Q2::class.java)
             startActivity(intent)
         }
 
@@ -105,7 +105,7 @@ class DBMS_Q1 : AppCompatActivity() {
             val selectedId = radGrp.checkedRadioButtonId
 
             if (selectedId==-1){
-                Toast.makeText(this,"Please select an option",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Answer already marked!!",Toast.LENGTH_SHORT).show()
             }
             else{
                 if (radBtn3.isChecked){
@@ -119,9 +119,9 @@ class DBMS_Q1 : AppCompatActivity() {
                     optn2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                     radBtn2.setTextColor(themeTextColor)
                     optn3.text = "Correct"
-                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                    optn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                    optn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
                 }
                 else{
                     if (radBtn1.isChecked){
@@ -132,9 +132,9 @@ class DBMS_Q1 : AppCompatActivity() {
                         optn4.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                         radBtn4.setTextColor(themeTextColor)
                         optn1.text = "Wrong"
-                        optn1.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                        optn1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
-                        radBtn1.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        optn1.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                        optn1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                        radBtn1.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                     }
                     else if (radBtn2.isChecked){
                         optn1.text = ""
@@ -144,9 +144,9 @@ class DBMS_Q1 : AppCompatActivity() {
                         optn4.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                         radBtn4.setTextColor(themeTextColor)
                         optn2.text = "Wrong"
-                        optn2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                        optn2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
-                        radBtn2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        optn2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                        optn2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                        radBtn2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                     }
                     else{
                         optn1.text = ""
@@ -156,21 +156,21 @@ class DBMS_Q1 : AppCompatActivity() {
                         optn2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                         radBtn2.setTextColor(themeTextColor)
                         optn4.text = "Wrong"
-                        optn4.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                        optn4.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
-                        radBtn4.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                        optn4.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                        optn4.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                        radBtn4.setTextColor(resources.getColor(android.R.color.holo_green_dark))
                     }
                     optn3.text = "Correct"
-                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                    optn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                    radBtn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                    optn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
                 }
 
-                explanationHeading.text = "Explanation :"
-                explanationText.text = "A Primary Key is used to uniquely identify each record (row) in a table.\n" +
-                        "It ensures that no two records have the same value and no value is NULL.\n" +
-                        "\n" +
-                        "Because of this, the primary key helps maintain data integrity and allows records to be accessed or referenced easily."
+//                explanationHeading.text = "Explanation :"
+//                explanationText.text = "A Primary Key is used to uniquely identify each record (row) in a table.\n" +
+//                        "It ensures that no two records have the same value and no value is NULL.\n" +
+//                        "\n" +
+//                        "Because of this, the primary key helps maintain data integrity and allows records to be accessed or referenced easily."
             }
         }
 

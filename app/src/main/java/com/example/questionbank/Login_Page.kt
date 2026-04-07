@@ -89,7 +89,7 @@ class Login_Page : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            isVerified=true
+            isVerified=false
             tvStatus.text = "Verified"
             tvStatus.setTextColor(resources.getColor((android.R.color.holo_green_dark)))
 //            tvStatus.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_24,0,0,0)

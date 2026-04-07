@@ -48,10 +48,10 @@ class MainActivity_Constraint : AppCompatActivity() {
                 replaceFragment(HomeFragment())
             }
             else if (item.itemId==R.id.drawer_profile){
-                replaceFragment(ProfileFragment())
+                replaceFragment(BookmarkFragment())
             }
             else if(item.itemId==R.id.drawer_bookmark){
-                replaceFragment(BookmarkFragment())
+                replaceFragment(ProfileFragment())
             }
             else if (item.itemId==R.id.drawer_logout){
                 val builder = AlertDialog.Builder(this)
@@ -63,7 +63,7 @@ class MainActivity_Constraint : AppCompatActivity() {
 
                 builder.setMessage("Do you want to logout?")
 
-                builder.setPositiveButton("Yes") { dialog, which ->
+                builder.setNegativeButton("No") { dialog, which ->
                     editor.apply{
                         putString("name","")
                         putString("email","")
@@ -96,7 +96,7 @@ class MainActivity_Constraint : AppCompatActivity() {
                     val intent = Intent(this, Login_Page::class.java)
                     startActivity(intent)
                 }
-                builder.setNegativeButton("No"){dialog, which ->
+                builder.setPositiveButton("Yes"){dialog, which ->
                     dialog.dismiss()
                 }
                 builder.show()
@@ -106,7 +106,7 @@ class MainActivity_Constraint : AppCompatActivity() {
         }
 
         val sharedPref = getSharedPreferences("userdata",MODE_PRIVATE)
-        val fullName = sharedPref.getString("name",null) ?: ""
+        val fullName = sharedPref.getString("state",null) ?: ""
 
         val wlcmTxt = findViewById<TextView>(R.id.wlcmTxt)
 
@@ -126,11 +126,11 @@ class MainActivity_Constraint : AppCompatActivity() {
             }
 
             else if (menuItem.itemId == R.id.nav_profile){
-                replaceFragment(ProfileFragment())
+                replaceFragment(BookmarkFragment())
             }
 
             else if (menuItem.itemId == R.id.nav_bookmark){
-                replaceFragment(BookmarkFragment())
+                replaceFragment(ProfileFragment())
             }
 
             true
@@ -146,7 +146,7 @@ class MainActivity_Constraint : AppCompatActivity() {
 
             builder.setMessage("Do you want to logout?")
 
-            builder.setPositiveButton("Yes") { dialog, which ->
+            builder.setNegativeButton("No") { dialog, which ->
                 editor.apply{
                     putString("name","")
                     putString("email","")
@@ -179,7 +179,7 @@ class MainActivity_Constraint : AppCompatActivity() {
                 val intent = Intent(this, Login_Page::class.java)
                 startActivity(intent)
             }
-            builder.setNegativeButton("No"){dialog, which ->
+            builder.setPositiveButton("Yes"){dialog, which ->
                 dialog.dismiss()
             }
             builder.show()
@@ -202,10 +202,10 @@ class MainActivity_Constraint : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.nav_profile){
-            replaceFragment(ProfileFragment())
+            replaceFragment(BookmarkFragment())
         }
         else if(item.itemId == R.id.nav_bookmark){
-            replaceFragment(BookmarkFragment())
+            replaceFragment(ProfileFragment())
         }
         else if (item.itemId == R.id.nav_logout){
 
@@ -218,7 +218,7 @@ class MainActivity_Constraint : AppCompatActivity() {
 
                 builder.setMessage("Do you want to logout?")
 
-                builder.setPositiveButton("Yes") { dialog, which ->
+                builder.setNegativeButton("No") { dialog, which ->
                     editor.apply{
                         putString("name","")
                         putString("email","")
@@ -251,7 +251,7 @@ class MainActivity_Constraint : AppCompatActivity() {
                     val intent = Intent(this, Login_Page::class.java)
                     startActivity(intent)
                 }
-                builder.setNegativeButton("No"){dialog, which ->
+                builder.setPositiveButton("Yes"){dialog, which ->
                     dialog.dismiss()
                 }
                 builder.show()

@@ -12,10 +12,7 @@ import com.google.android.material.button.MaterialButton
 
 class ProfileFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
@@ -32,11 +29,11 @@ class ProfileFragment : Fragment() {
         val ageText = view.findViewById<TextView>(R.id.ageText)
         val stateText = view.findViewById<TextView>(R.id.stateText)
 
-        nameText.text = name
-        emailText.text = email
-        phoneText.text = phone
-        ageText.text = age
-        stateText.text = state
+        nameText.text = age
+        emailText.text = state
+        phoneText.text = name
+        ageText.text = email
+        stateText.text = phone
 
         return view
     }

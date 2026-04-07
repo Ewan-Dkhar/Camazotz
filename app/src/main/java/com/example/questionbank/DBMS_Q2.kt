@@ -50,24 +50,24 @@ class DBMS_Q2 : AppCompatActivity() {
         var isBookmarked = sharedPrefDbms2.contains("dbms2")
 
         if (isBookmarked){
-            bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
+            bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
         }
         else{
-            bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
+            bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
         }
 
         bookmarkBtn.setOnClickListener {
             isBookmarked = !isBookmarked
 
             if (isBookmarked){
-                bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
+                bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
                 Toast.makeText(this,"Question Bookmarked Successfully",Toast.LENGTH_SHORT).show()
 
                 editor.putString("dbms2","Q.2")
                 editor.apply()
             }
             else{
-                bookmarkBtn.setIconResource(R.drawable.outline_bookmark_24)
+                bookmarkBtn.setIconResource(R.drawable.baseline_bookmark_24)
 
                 editor.remove("dbms2")
                 editor.apply()
@@ -104,7 +104,7 @@ class DBMS_Q2 : AppCompatActivity() {
         sbmtBtn.setOnClickListener {
 
             if (!(checkBox1.isChecked || checkBox2.isChecked || checkBox3.isChecked || checkBox4.isChecked)){
-                Toast.makeText(this,"Please select an option",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Question Solved Successfully",Toast.LENGTH_SHORT).show()
                 optn1.text = ""
                 optn1.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                 checkBox1.setTextColor(themeTextColor)
@@ -124,28 +124,28 @@ class DBMS_Q2 : AppCompatActivity() {
             else{
                 if (checkBox2.isChecked && checkBox3.isChecked){
                     optn2.text = "Wrong"
-                    checkBox2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
+                    checkBox2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
                     optn3.text = "Wrong"
-                    checkBox3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
+                    checkBox3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
                 }
                 else if (checkBox2.isChecked){
                     optn2.text = "Wrong"
-                    checkBox2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn2.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
+                    checkBox2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn2.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
                     optn3.text = ""
                     optn3.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                     checkBox3.setTextColor(themeTextColor)
                 }
                 else if (checkBox3.isChecked){
                     optn3.text = "Wrong"
-                    checkBox3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn3.setTextColor(resources.getColor(android.R.color.holo_red_dark))
-                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
+                    checkBox3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn3.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                    optn3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
                     optn2.text = ""
                     optn2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
                     checkBox2.setTextColor(themeTextColor)
@@ -159,18 +159,18 @@ class DBMS_Q2 : AppCompatActivity() {
                     checkBox3.setTextColor(themeTextColor)
                 }
                 optn1.text = "Correct"
-                checkBox1.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                optn1.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                optn1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                checkBox1.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                optn1.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                optn1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
                 optn4.text = "Correct"
-                checkBox4.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                optn4.setTextColor(resources.getColor(android.R.color.holo_green_dark))
-                optn4.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_green,0,0,0)
+                checkBox4.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                optn4.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                optn4.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_cancel_red,0,0,0)
 
-                explanationHeading.text = "Explanation :"
-                explanationText.text = "A Primary Key is used to uniquely identify each record in a table.\n" +
-                        "It must contain unique values and cannot be NULL.\n" +
-                        "This ensures that every record can be identified without ambiguity."
+//                explanationHeading.text = "Explanation :"
+//                explanationText.text = "A Primary Key is used to uniquely identify each record in a table.\n" +
+//                        "It must contain unique values and cannot be NULL.\n" +
+//                        "This ensures that every record can be identified without ambiguity."
             }
         }
 
