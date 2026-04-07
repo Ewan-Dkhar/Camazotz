@@ -1,7 +1,7 @@
 # Question Bank
 
 ## Bug Description
-- phase-1/README.md
+- [phase-1/README.md](https://github.com/Ewan-Dkhar/Camazotz/blob/main/phase-1/README.md)
 
 ## Description
 1st app created as an assignment for Karamat.<br>
