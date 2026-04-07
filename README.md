@@ -1,5 +1,8 @@
 # Question Bank
 
+## Bug Description
+- phase-1/README.md
+
 ## Description
 1st app created as an assignment for Karamat.<br>
 A Question Bank which includes : <br>
